@@ -18,8 +18,8 @@ vector<int> readLine(string line) {
                 break;
             case ' ':
                 continue;
-            default:
-                cout << "Error, space found that is not 1 or 0. It will not be included" << endl;
+            // default:
+            //     cout << "Error, space found that is not 1 or 0. It will not be included" << endl;
         }
     }
 
@@ -92,9 +92,14 @@ vector<vector<int>> nextGeneration(vector<vector<int>> space)
 
 
 
-int main() {
+int main(int argc, char *argv[]) {
 
-    ifstream inputFile("test.txt");
+    string filename = argv[1];
+
+    if (filename.substr(filename.length() - 4, 4) != ".txt")
+        filename += ".txt";
+
+    ifstream inputFile(filename);
 
     vector<vector<int>> area;
 
@@ -108,7 +113,7 @@ int main() {
         inputFile.close();
     }
     else {
-        cerr << "Unable to open";
+        cerr << "Unable to open" << endl;
     }
 
     // Print out the first generation
