@@ -1,7 +1,8 @@
-## conways-game-of-life
+## Conways game of life
 
 This program will simulate Conways Game of Life.
-Note: Currently this only simulates one generation given a specific state. More will be added.
+Note: Currently this only works on windows due to the conio library being used.
+To make this cross platform, will have to implement a different terminal library
 
 #### How to use it:
 
